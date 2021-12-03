@@ -29,9 +29,7 @@ describe('Menu Database', () => {
 
     test('Menu has items', async() => {
         await Menu.bulkCreate(arrayOfMenulist)
-        // await Musician.create({name: 'Prince', instrument: 'guitar'})
-        // const musicians = await Musician.findAll();
-        //read test instance from db
+   
         const testMenu = await Menu.findOne({
             where: {
               entree_name: 'Steak'
@@ -41,9 +39,7 @@ describe('Menu Database', () => {
     })
     test('Customer table', async() => {
         await Customer.bulkCreate(arrayOfCustomer)
-        // await Musician.create({name: 'Prince', instrument: 'guitar'})
-        // const musicians = await Musician.findAll();
-        //read test instance from db
+
         const testCustomer = await Customer.findOne({
             where: {
               Cust_id: 20
@@ -53,9 +49,7 @@ describe('Menu Database', () => {
     })
     test('Dish table', async() => {
         await Dish.bulkCreate(arrayOfDish)
-        // await Musician.create({name: 'Prince', instrument: 'guitar'})
-        // const musicians = await Musician.findAll();
-        //read test instance from db
+ 
         const testDish = await Dish.findOne({
             where: {
               Cust_id: 101
@@ -65,53 +59,3 @@ describe('Menu Database', () => {
     })
 
 })
-//Model.exports=Menu.js, Customer.js
-
-// const {sequelize} = require('./db')
-// const {Menu} = require('./Menu')
-// describe('Menu Database', () => {
-//     beforeAll(async() => {
-//         await sequelize.sync({force:true})
-//     })
-//     const arrayOfMusicians=[
-//         {name: 'kasem', instrument: 'dhool'},
-//         {name: 'irene',instrument1: 'guitar'},
-//         {name: 'ilancheyan', instrument2: 'tabla'}
-//     ]
-//     test('musicians have name', async() => {
-//         await Musician.bulkCreate(arrayOfMusicians)
-//         // await Musician.create({name: 'Prince', instrument: 'guitar'})
-//         // const musicians = await Musician.findAll();
-//         //read test instance from db
-//         const testMusician = await Musician.findOne({
-//             where: {
-//               name: 'kasem'
-//             }
-//           });
-//         expect(testMusician.name).toBe('kasem')
-//     })
-//     test('musicians have an instrument', async() => {
-//         await Musician.bulkCreate(arrayOfMusicians)
-//         // await Musician.create({name: 'Prince', instrument: 'guitar'})
-//         // const musicians = await Musician.findAll();
-//         //read test instance from db
-//         const testMusician = await Musician.findOne({
-//             where: {
-//               name: 'irene'
-//             }
-//           });
-//         expect(testMusician.name).toBe('irene')
-//     })
-//     test('musicians have an instrument', async() => {
-//         await Musician.bulkCreate(arrayOfMusicians)
-//         // await Musician.create({name: 'Prince', instrument: 'guitar'})
-//         // const musicians = await Musician.findAll();
-//         //read test instance from db
-//         const testMusician = await Musician.findOne({
-//             where: {
-//               name: 'ilancheyan'
-//             }
-//           });
-//         expect(testMusician.name).toBe('ilancheyan')
-//     })
-// })
