@@ -7,8 +7,8 @@ class Customer extends Model {
 Customer.init({
  
     Cust_id: DataTypes.INTEGER,
-    Payment_id: DataTypes.INTEGER,
-    Food_id: DataTypes.INTEGER
+    payment_id: DataTypes.INTEGER,
+    food_id: DataTypes.INTEGER
 }, {
     sequelize, //specifies what database our model is stored in
     timestamps: false
